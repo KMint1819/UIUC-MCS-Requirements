@@ -2,8 +2,9 @@
   "name": "uiuc-mcs-requirements",
   "version": "0.1.0",
   "homepage": "https://kmint1819.github.io/UIUC-MCS-Requirements/",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "browserslist": "^4.21.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
@@ -18,5 +19,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
