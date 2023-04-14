@@ -19,3 +19,4 @@ A web app to see if you're eligible to graduate!
 ---
 ### Extra
 - Styles
+- Make the courses set in database not in files

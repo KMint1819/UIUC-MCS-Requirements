@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import { Badge, Button, Chip } from '@mui/material';
 import RequirementItem from './components/RequirementItem';
 import requirements from './requirements';
+import Courses from './files/Courses.json'
 import './App.css';
 
 const App = () => {
@@ -22,7 +23,11 @@ const App = () => {
     e.preventDefault();
 
     if (!inputCourse) return;
-
+    if (!Courses.includes(inputCourse)) {
+      alert("Invalid course number");
+      setInputCourse('');
+      return;
+    }
     setCourses([...courses, inputCourse]);
     setInputCourse('');
   };

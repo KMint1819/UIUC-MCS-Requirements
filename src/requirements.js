@@ -1,4 +1,5 @@
-import BreadthAreas from "./BreadthAreas.json";
+import BreadthAreas from "./files/BreadthAreas.json";
+
 const requirements = [
     {
         'description': 'You must have more than 3 advanced courses (500-level).',
@@ -17,6 +18,7 @@ const requirements = [
         }
     },
     {
+        // BUG: Using different 500-level courses to satisfy the breadth requirement.
         'description': 'Must complete four different courses, each from a different core area, with a grade of B- or higher.',
         'checker': (courses) => {
             if (courses.length >= 4) {
