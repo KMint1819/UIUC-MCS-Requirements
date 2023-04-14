@@ -1,7 +1,9 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.svg';
+
 import { Badge, Button, Chip } from '@mui/material';
-import AdvancedRequirement from './components/AdvancedRequirement';
+import RequirementItem from './components/RequirementItem';
+import requirements from './requirements';
 import './App.css';
 
 const App = () => {
@@ -31,8 +33,9 @@ const App = () => {
     setCourses(copy);
   }
 
+
   return (
-    <div className="App">
+    <div className="App" >
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>UIUC MCSR</h1>
@@ -62,8 +65,18 @@ const App = () => {
         })}
       </div>
       <div className="restricts">
-        <AdvancedRequirement selectedCourses={courses} />
+        {requirements.map((requirement, index) => {
+          return <RequirementItem
+            key={index}
+            description={requirement.description}
+            checker={requirement.checker}
+            selectedCourses={courses}
+          />
+        })}
       </div>
+      <p>
+
+      </p>
     </div >
   );
 }
