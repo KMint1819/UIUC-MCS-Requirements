@@ -1,6 +1,7 @@
 import React, { useState, StyleSheet } from 'react';
 import './AdvancedRequirement.css'
 
+const text = "You must have more than 3 advanced courses (500-level)";
 const AdvancedRequirement = (props) => {
     const courses = props.selectedCourses;
     let isSatisfied = false;
@@ -16,7 +17,19 @@ const AdvancedRequirement = (props) => {
     }
     console.log('AdvancedRequirement is satisfied: ' + isSatisfied + '');
     if (isSatisfied)
-        return <p className="req-satisfied">You should have more than 3 advanced courses (500-level)</p>
-    return <p className="req-unsatisfied">You have more than 3 advanced courses (500-level)</p>
+        return (
+            <p >
+                <font className="req-satisfied" color="green">
+                    {text}
+                </font>
+            </p>
+        )
+    return (
+        <p >
+            <font color="red" className="req-unsatisfied">
+                {text}
+            </font>
+        </p>
+    )
 }
 export default AdvancedRequirement;
