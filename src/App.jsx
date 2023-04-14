@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import { Badge, Button, Chip } from '@mui/material';
-import Requirement from './components/Requirement';
+import AdvancedRequirement from './components/AdvancedRequirement';
 import './App.css';
 
 const App = () => {
@@ -15,6 +15,7 @@ const App = () => {
   // todo filters:
   // 1. invalid course number
   // 2. duplicate course number
+  // 3. alphabetical characters
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -61,12 +62,7 @@ const App = () => {
         })}
       </div>
       <div className="restricts">
-        <ul>
-          <Requirement a="123" />
-          <Requirement b="444" />
-          <Requirement c="DDD" />
-        </ul>
-
+        <AdvancedRequirement selectedCourses={courses} />
       </div>
     </div >
   );

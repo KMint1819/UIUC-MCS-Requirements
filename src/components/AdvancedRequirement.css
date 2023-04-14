@@ -1,0 +1,11 @@
+.req-unsatisfied {
+  font-size: large;
+  color: 'red';
+}
+
+.req-satisfied {
+  font-size: large;
+  color: 'green';
+  text-decoration: line-through;
+  text-decoration-style: solid;
+}
