@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.svg';
-import { Button } from '@mui/material';
+import { Badge, Button, Chip } from '@mui/material';
 import './App.css';
 
 const App = () => {
@@ -14,8 +14,11 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!inputCourse) return;
+
     setCourses([...courses, inputCourse]);
     setInputCourse('');
+    console.log('courses: ', courses);
   };
 
   return (
@@ -30,6 +33,7 @@ const App = () => {
       <div className="input">
         <form onSubmit={handleSubmit}>
           <input
+            autoFocus
             placeholder='Enter a CS course number (e.g. 425)'
             value={inputCourse}
             onChange={handleInputChange} />
@@ -37,7 +41,13 @@ const App = () => {
         </form>
       </div>
       <div className="badges">
-        {courses}
+        {courses.map(course => {
+          return <Chip
+            label={course}
+            color='primary'
+            variant='Chip Outlined'
+          />
+        })}
       </div>
       <div className="restricts">
       </div>
