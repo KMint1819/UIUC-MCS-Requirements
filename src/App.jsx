@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import { Badge, Button, Chip } from '@mui/material';
+import Requirement from './components/Requirement';
 import './App.css';
 
 const App = () => {
@@ -11,6 +12,9 @@ const App = () => {
     setInputCourse(e.target.value);
   };
 
+  // todo filters:
+  // 1. invalid course number
+  // 2. duplicate course number
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -18,8 +22,13 @@ const App = () => {
 
     setCourses([...courses, inputCourse]);
     setInputCourse('');
-    console.log('courses: ', courses);
   };
+
+  const handleDelete = (index) => {
+    const copy = [...courses];
+    copy.splice(index, 1);
+    setCourses(copy);
+  }
 
   return (
     <div className="App">
@@ -41,17 +50,25 @@ const App = () => {
         </form>
       </div>
       <div className="badges">
-        {courses.map(course => {
+        {courses.map((course, index) => {
           return <Chip
             label={course}
+            key={index}
+            onDelete={() => handleDelete(index)}
             color='primary'
             variant='Chip Outlined'
           />
         })}
       </div>
       <div className="restricts">
+        <ul>
+          <Requirement a="123" />
+          <Requirement b="444" />
+          <Requirement c="DDD" />
+        </ul>
+
       </div>
-    </div>
+    </div >
   );
 }
 export default App;
