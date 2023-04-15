@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/UIUC-MCS-Requirements/static/css/main.797418dd.css",
-    "main.js": "/UIUC-MCS-Requirements/static/js/main.3a60421f.js",
+    "main.css": "/UIUC-MCS-Requirements/static/css/main.f30834d2.css",
+    "main.js": "/UIUC-MCS-Requirements/static/js/main.321fe96a.js",
     "static/media/logo.svg": "/UIUC-MCS-Requirements/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "index.html": "/UIUC-MCS-Requirements/index.html",
-    "main.797418dd.css.map": "/UIUC-MCS-Requirements/static/css/main.797418dd.css.map",
-    "main.3a60421f.js.map": "/UIUC-MCS-Requirements/static/js/main.3a60421f.js.map"
+    "main.f30834d2.css.map": "/UIUC-MCS-Requirements/static/css/main.f30834d2.css.map",
+    "main.321fe96a.js.map": "/UIUC-MCS-Requirements/static/js/main.321fe96a.js.map"
   },
   "entrypoints": [
-    "static/css/main.797418dd.css",
-    "static/js/main.3a60421f.js"
+    "static/css/main.f30834d2.css",
+    "static/js/main.321fe96a.js"
   ]
 }
