@@ -1,0 +1,9 @@
+.req-unsatisfied {
+  font-size: large;
+}
+
+.req-satisfied {
+  font-size: large;
+  text-decoration: line-through;
+  text-decoration-style: solid;
+}

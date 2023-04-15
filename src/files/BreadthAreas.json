@@ -1,0 +1,129 @@
+{
+    "Architecture, Compilers, Parallel Computing": [
+        "426",
+        "431",
+        "433",
+        "483",
+        "484",
+        "526",
+        "533",
+        "534",
+        "536"
+    ],
+    "Artificial Intelligence": [
+        "440",
+        "441",
+        "442",
+        "443",
+        "444",
+        "445",
+        "446",
+        "447",
+        "448",
+        "540",
+        "542",
+        "543",
+        "544",
+        "545",
+        "546",
+        "588",
+        "598 DL for Healthcare"
+    ],
+    "Bioinformatics and Computational Biology": [
+        "466",
+        "581",
+        "582"
+    ],
+    "Computers and Education": [
+        "500"
+    ],
+    "Database and Information Systems": [
+        "410",
+        "411",
+        "412",
+        "470",
+        "510",
+        "511",
+        "512",
+        "514"
+    ],
+    "Interactive Computing": [
+        "409",
+        "415",
+        "416",
+        "417",
+        "418",
+        "419",
+        "445",
+        "465",
+        "467",
+        "469",
+        "519",
+        "565",
+        "567",
+        "568"
+    ],
+    "Programming Languages, Formal Methods, Software Engineering": [
+        "421",
+        "422",
+        "427",
+        "428",
+        "474",
+        "475",
+        "476",
+        "477",
+        "521",
+        "522",
+        "524",
+        "527",
+        "576",
+        "584"
+    ],
+    "Scientific Computing": [
+        "450",
+        "482",
+        "554",
+        "555",
+        "556",
+        "558"
+    ],
+    "Security and Privacy": [
+        "461",
+        "463",
+        "562",
+        "563"
+    ],
+    "Systems and Networking (includes real-time systems and security)": [
+        "414",
+        "423",
+        "424",
+        "425",
+        "434",
+        "435",
+        "436",
+        "437",
+        "438",
+        "439",
+        "461",
+        "463",
+        "498 Cloud Computing Applications",
+        "523",
+        "525",
+        "537",
+        "538",
+        "541",
+        "563"
+    ],
+    "Theory and Algorithms": [
+        "473",
+        "475",
+        "507",
+        "571",
+        "573",
+        "574",
+        "579",
+        "580",
+        "583",
+        "586"
+    ]
+}
