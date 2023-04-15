@@ -1,5 +1,5 @@
 # UIUC-MCS requirements
-A web app to see if you're eligible to graduate!
+[A web app to see if you're eligible to graduate!](https://kmint1819.github.io/UIUC-MCS-Requirements/)
 
 ## TODO:
 ### Core
