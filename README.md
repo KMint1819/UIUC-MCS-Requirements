@@ -10,10 +10,13 @@ A web app to see if you're eligible to graduate!
 - Course recommendation
 ### UI
 - Input:
-  - Filter duplicates
-  - Filter invalid courses
+  - ~Filter duplicates~
+  - ~Filter invalid courses~
+  - Drop down list
 - Badges:
   - Able to choose number credits 
+  - Able to choose grades
+  
 - Requirements:
   - Add checkbox in front
 ---

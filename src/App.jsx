@@ -23,8 +23,14 @@ const App = () => {
     e.preventDefault();
 
     if (!inputCourse) return;
+
     if (!Courses.includes(inputCourse)) {
-      alert("Invalid course number");
+      alert("Course does not exist");
+      setInputCourse('');
+      return;
+    }
+    if (courses.includes(inputCourse)) {
+      alert("Duplicate course number");
       setInputCourse('');
       return;
     }
