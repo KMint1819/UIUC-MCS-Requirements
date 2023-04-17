@@ -1,10 +1,10 @@
-import React, { Component, useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 
-import { Autocomplete, Badge, Button, Chip } from '@mui/material';
+import { Button, Chip } from '@mui/material';
 import RequirementItem from './components/RequirementItem';
 import requirements from './requirements';
-import Courses from './files/Courses.json'
+import Courses from './files/Courses.json';
 import './App.css';
 import MyTable from './components/MyTable';
 
@@ -26,12 +26,12 @@ const App = () => {
     if (!inputCourse) return;
 
     if (!Courses.includes(inputCourse)) {
-      alert("Course does not exist");
+      alert('Course does not exist');
       setInputCourse('');
       return;
     }
     if (courses.includes(inputCourse)) {
-      alert("Duplicate course number");
+      alert('Duplicate course number');
       setInputCourse('');
       return;
     }
@@ -43,7 +43,7 @@ const App = () => {
     const copy = [...courses];
     copy.splice(index, 1);
     setCourses(copy);
-  }
+  };
 
   return (
     <div className="App" >
@@ -76,7 +76,7 @@ const App = () => {
             onDelete={() => handleDelete(index)}
             color='primary'
             variant='Chip Outlined'
-          />
+          />;
         })}
       </div>
 
@@ -87,7 +87,7 @@ const App = () => {
             description={requirement.description}
             checker={requirement.checker}
             selectedCourses={courses}
-          />
+          />;
         })}
       </div>
       <p>
@@ -95,5 +95,5 @@ const App = () => {
       </p>
     </div >
   );
-}
+};
 export default App;
