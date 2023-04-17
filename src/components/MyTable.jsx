@@ -1,43 +1,62 @@
-import { useState, useMemo, useEffect } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Box, Typography } from '@mui/material';
-import { useTable } from 'react-table';
-import MaterialTable from 'material-table-jspdf-fix';
+import React, { useState } from 'react'
 
-const MyTable = ({ courses }) => {
-
-    const columns = [
-        { title: 'Name', field: 'name', width: '1%' },
-        { title: 'Number', field: 'number', editable: 'onUpdate', width: '5%' },
-        { title: 'Grades', field: 'grades' },
-    ];
+const MyTable = ({courses}) => {
+    const [courses, setCourses] = useState([
+        { id: 1, name: 'Communication Network', department: 'CS', alnum: '438', grade: 'A', credit: 4 },
+        { id: 2, name: 'Distributed System', department: 'CS', alnum: '425', grade: 'B-', credit: 4 },
+        { id: 3, name: 'Applied Parallel Programming', department: 'CS', alnum: '483', grade: 'B+', credit: 4 },
+    ]);
+    const availableCredits = [4, 3];
 
     return (
-        <MaterialTable
-            title="Editable Table Example"
-            columns={columns}
-            data={data}
-            editable={{
-                onRowUpdate: (newData, oldData) =>
-                    new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            const dataUpdate = [...data];
-                            const index = oldData.tableData.id;
-                            dataUpdate[index] = newData;
-                            setData([...dataUpdate]);
-                            resolve();
-                        }, 100);
-                    }),
-            }}
-            options={{
-                cellEditable: true,
-                editable: true,
-                tableLayout: 'fixed',
-                rowStyle: {
-                    overflowWrap: 'break-word'
-                }
-            }}
-        />
+        <table>
+            <tr>
+                <td>Course Alnum</td>
+                <td>Name</td>
+                <td>Grade</td>
+                <td>credit</td>
+            </tr>
+            {courses.map(course => {
+                const {id, name, department, alnum, grade, credit} = course;
+                return (
+                    <tr key={id}>
+                        <td>{department} {alnum}</td>
+                        <td>{name}</td>
+                        <td>
+                            <select name="grade" id="grade">
+                                <option value="A+">A+</option>
+                                <option value="A">A</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B">B</option>
+                                <option value="B-">B-</option>
+                                <option value="C+">C+</option>
+                                <option value="C">C</option>
+                                <option value="C-">C-</option>
+                                <option value="D+">D+</option>
+                                <option value="D">D</option>
+                                <option value="D-">D-</option>
+                                <option value="F">F</option>
+                            </select>
+                        </td>
+                        <td>
+                            {availableCredits.length > 1 
+                                ? ( 
+                                    <select name="credit" id="credit">
+                                    {availableCredits.map(credit => {
+                                        return (
+                                            <option value={credit}>{credit}</option>
+                                        )
+                                    })}
+                                    </select>
+                                    ) 
+                                : availableCredits[0]
+                            }
+                        </td>
+                    </tr>
+                )})}
+        </table>
     );
+}
 
-};
 export default MyTable;

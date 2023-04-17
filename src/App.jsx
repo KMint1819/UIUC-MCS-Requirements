@@ -44,22 +44,6 @@ const App = () => {
     copy.splice(index, 1);
     setCourses(copy);
   }
-  const handleCellUpdate = (newValue, oldValue, rowData, columnDef) => {
-    console.log('oldData', oldData)
-    console.log('newData', newData)
-    console.log('rowData', rowData)
-    console.log('columnDef', columnDef)
-    return new Promise((resolve, reject) => {
-      console.log('newValue: ' + newValue);
-      setTimeout(resolve, 4000);
-    });
-  }
-
-  const [data, setData] = useState([
-    { id: 1, name: 'John Doe', number: 123, grades: 'A' },
-    { id: 2, name: 'Jane Doe', number: 456, grades: 'B' },
-    { id: 3, name: 'Bob Smith', number: 789, grades: 'C' },
-  ]);
 
   return (
     <div className="App" >
